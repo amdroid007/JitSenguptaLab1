@@ -4,6 +4,7 @@
 package edu.fiu.toweldispenser;
 
 import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
 
 /**
  * @author coblab
@@ -26,12 +27,12 @@ public class Motor implements SelfCheckCapable {
 	@Override
 	public boolean runSelfCheck() {
 		// TODO Auto-generated method stub
-		return true;
+		return SelfCheckUtils.basicSelfCheckRunner(this);
 	}
 
 	public void run(int i) {
 		// TODO Auto-generated method stub
-		System.out.println("Running motoro for " + i + " seconds.");
+		System.out.println("Running " + getComponentName() + " for " + i + " seconds.");
 	}
 
 }

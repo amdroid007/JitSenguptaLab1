@@ -4,6 +4,7 @@
 package edu.fiu.toweldispenser;
 
 import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
 
 /**
  * @author coblab
@@ -19,7 +20,7 @@ public class TowelReel implements SelfCheckCapable {
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "GE Towel reel";
 	}
 
 	@Override
@@ -31,7 +32,7 @@ public class TowelReel implements SelfCheckCapable {
 	@Override
 	public boolean runSelfCheck() {
 		// TODO Auto-generated method stub
-		return true;
+		return SelfCheckUtils.basicSelfCheckRunner(this);
 	}
 
 	public void loadTowels() {

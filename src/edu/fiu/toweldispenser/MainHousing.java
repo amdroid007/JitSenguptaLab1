@@ -30,7 +30,8 @@ public class MainHousing implements SelfCheckCapable {
 	@Override
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub
-		return SelfCheckUtils.randomCheck(0.05);
+		return SelfCheckUtils.randomCheck(0.05) && 
+				SelfCheckUtils.checkComponents(mytowelreel, mystatuslight, myproxsensor);
 	}
 
 	@Override
